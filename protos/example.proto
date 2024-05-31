@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package masterclass.go;
+
+option go_package = "github.com/uandersonricardo/masterclass-go/pkg/pb";
+
+service FrameService {
+    rpc GetFrame (GetFrameRequest) returns (Frame) {}
+}
+
+message GetFrameRequest {
+    int32 id = 1;
+}
+
+message Frame {
+    int32 id = 1;
+}
